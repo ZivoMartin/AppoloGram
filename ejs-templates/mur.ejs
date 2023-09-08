@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html> 
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/public/css/mur.css">
+    </head>
+    <body>
+        <div><a href="/my_pr/<%=user%>" id="link_pdp_user"><button id="pdp_user"><img src="<%=pdp_user%>" height="50px" width="50px"></button></a>
+        <a href="/index" id="deconnexion">Deconnexion</a></div>
+        <h1>Voici le mur d'image de <%=user%></h1>
+        <%if(follow[0] != null){%>           
+            <%for(i = 0; i<id.length; i = i + 1){ %>
+                <div class='bloc_image' id="PAPADIV<%=i%>"><div class='pseudo'>
+                    <a href="/pr/<%=pseudos[i]%>/<%=user%>"><img src='<%=pdp[i]%>' height=35 class='pdp' id="pdp<%=i%>"><p class='nom_du_posteur'><%=pseudos[i]%></p></a>
+                </div>
+                <div class='img_pouce_txt'><img src='<%=file_path[i]%>' class='image' height=400 width=340 id="image<%=i%>">
+                <%if(liked[i]){%>
+                    <button type='button' id="button_like<%=i%>" class='button_like'><img id="pouce<%=id[i]%>" src='/public/photos/pouceGris.jpg' height=60 class='pouce'></button><p class='nb_like' id="<%=user%>"><%=nb_likes[i]%> </p></div>              
+                <%}else{%>
+                    <button type='button' id="button_like<%=i%>" class='button_like'><img id="pouce<%=id[i]%>" src='/public/photos/pouceBleu.jpg' height=60 class='pouce'></button><p class='nb_like' id="<%=user%>"><%=nb_likes[i]%></p></div>                
+                <%}%>                    
+                <Form id="form<%=i%>" class="formulaires"><input type='text' placeholder='Post a comment' name='commentaire' id="comment_input<%=i%>" class="comment_input">
+                <input type='submit' value='submit' id="submit_comment<%=i%>"></Form>
+                <%if(commentaires[i] != null){%>
+                    <%for(k = 0; k<=3; k+=1){%>
+                        <%if(k<commentaires[i].length){ %>
+                            <div><p class='comms<%=i%>' id="comment_img_<%=i%>_number_<%=k%>"><%=commentaires[i][k]%></p></div>
+                        <%}%>
+                    <%}%>
+                    <%if(commentaires[i].length>4){%>
+                        <button id="see_more<%=id[i]%>/<%=i%>" class="see_more">Voir plus</button>
+                    <%}%>
+                <%}%>
+                </div>
+            <%}%>
+        <%}%>
+        <a href="/delete/<%=user%>" id="delete">Supprimer son compte</a>
+        <script src="/public/js/mur.js"></script>
+    </body><html></html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/Login.css">
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter"><path d="M12 2C9.243 2 7 4.243 7 7v3H6c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-8c0-1.103-.897-2-2-2h-1V7c0-2.757-2.243-5-5-5zm6 10 .002 8H6v-8h12zm-9-2V7c0-1.654 1.346-3 3-3s3 1.346 3 3v3H9z"></path></svg>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+    <div class="box">
+        <div class="container">
+            <div class="top-header">
+                <header id="header">Login</header>
+            </div>
+            <Form action="/mur/connexion" method="POST">
+                <div class="input-field">
+                    <input type="text" name="username" class="input" placeholder="Username" required id="username_input">   
+                    <img class="bx-user" src="photos/bx-user.png" id="user_nam_img">
+                </div>
+                <div class="input-field">
+                    <input type="password" name="username" class="input" placeholder="Password" required id="password_input">
+                    <img id="password_img" class="bx-user" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAXFJREFUWEftl41NAkEQhT860Aq0A7UCtQPtQCrQDoAKwArUDuxA7QAq0BK0AslLdsl4xzK3Gy6eZichJAsz++7Nm58bMRAbDQQHfx7IATABroBjw+oz8AToO8tKGNHlD4DApExAxsBnVzS5QC6Al0bwL+ADOGmcvwKXfQARA++GiRVwAyzNZdOQsng0A3TmWg4jd8A8RBSI00R0gVPqZErNoYsCsqpGVJ+HoNeOIMVSTJXSI9+dlsOIdHAUonl+C+A2/FeifdwnkG8TzANitdJJJ15A+yAVSDOtv8qISjEK1PYDrzeo8ekjU8XEqlH7l+hbtksjVvme6Lv+rr5ytg1MCogGmbpoH3YPqDn+sBQQO1PURVuOBQjjjHozaduE6QJkq2MBkCj2CiSSVxlJNcSqkaqRVIv5P1Wj/XMfLT5O4KyqGczQU577WAP0MqbXkNZO4u2sWow0ie37bcG82yxI2uazF6PSC4v8PEaKgpY4rQE0UmgjV9BfgwAAAABJRU5ErkJggg=="/>
+                    
+                </div>
+                <div class="input-field">
+                    <input type="submit" class="submit" value="Login" id="submit">
+                </div>
+            </Form>
+
+            <div class="bottom">
+                <div class="left">
+                    <input type="checkbox" id="check" id="checkbox">
+                    <label for="check" id="text_checkbox">Remember Me</label>
+                </div>
+                <div class="right">
+                    <label id="forgot_password"><a href="#">Forgot password?</a></label>
+                </div>
+            </div>
+    </div>
+
+        </div>
+    </div>
+</body>
+</html>

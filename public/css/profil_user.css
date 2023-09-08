@@ -1,0 +1,22 @@
+.corps{
+    display: inline-block;
+}
+
+#nb_follower{
+    padding-right: 20px;
+}
+
+.ensemble{
+    display: inline-block;
+    padding-top: 20px;
+}
+
+#div_images{
+    text-align: center;
+}
+
+#username{
+    text-align: center;
+    font-size: larger;
+}
+

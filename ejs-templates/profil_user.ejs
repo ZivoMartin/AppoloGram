@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/public/css/profil_user.css">
+</head>
+<body>
+    <div id="div_pr">
+        <p id="username"><%=user%></p>
+        <a href="<%=pdp_user%>" class="corps"><img src="<%=pdp_user%>" height="220px"></a>
+        <% if(followers.length == 0 || followers.length == 1){%>
+            <p class="corps" id="nb_follower"><%=followers.length%> follower</p>
+        <%}else{%>
+            <p class="corps" id="nb_follower"><%=followers.length%> followers</p>
+        <% }if(followed.length == 0 || followed.length == 1){%>
+            <p class="corps"><%=followed.length%> follow</p>
+        <%}else{%>
+            <p class="corps"><%=followed.length%> follows</p>
+        <%}%>
+    </div> 
+    <div id="div_images">
+        <% for(i = 0; i<=images.length-1; i++){%>
+            <div id="ensemble_<%=i%>">
+                <img src="<%=images[i]%>" height="300px" class="ensemble">
+                <img src="/public/photos/PouceBleu.jpg" height="60">
+                <p class="ensemble"><%=nb_likes[i]%></p>
+            </div>
+            <button class="com_button" id="<%=id[i]%>/<%=i%>">commentaires</button>
+        <%}%>
+    </div>
+    <script src="/public/js/profil_user.js"></script>
+    <%if(!my_pr){%>
+    <%}%>
+</body>
+</html>
